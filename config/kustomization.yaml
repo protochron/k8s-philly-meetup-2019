@@ -1,0 +1,11 @@
+resources:
+  - ../base
+
+configMapGenerator:
+  - name: someapp
+    namespace: someapp
+    literals:
+      - config_option=value
+patches:
+  - config-patch.yaml
+  - resources.yaml

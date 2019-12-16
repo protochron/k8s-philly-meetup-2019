@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: someapp
+  namespace: someapp
+  labels:
+    app: someapp
+spec:
+  selector:
+    matchLabels:
+      app: someapp
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: someapp
+    spec:
+      containers:
+      - name: app
+        image: example.com/images/someapp:0.0.1
+        env:
+          - name: SOME_ENV_VAR
+            value: "true"
+        ports:
+          - containerPort: 8443

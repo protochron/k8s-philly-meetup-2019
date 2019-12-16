@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: someapp
+  namespace: someapp
+spec:
+  template:
+    spec:
+    - name: app
+      resources:
+        cpu: 2
+        memory: 4Gi
