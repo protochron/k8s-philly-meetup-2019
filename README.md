@@ -22,5 +22,5 @@ export XDG_CONFIG_HOME=$(pwd)
 
 ### Build
 ```
-kustomize build --enable_alpha_plugins test
+kustomize build --enable_alpha_plugins production
 ```
